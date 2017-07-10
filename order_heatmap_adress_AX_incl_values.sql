@@ -36,6 +36,10 @@ LEFT JOIN
 	"AX.PROD_DynamicsAX2012.dbo.LOGISTICSLOCATION" as ll
 	on ll.recid = lpa.location	
 
+LEFT JOIN
+	"AX.PROD_DynamicsAX2012.dbo.WINShipCarrierTracking" as wsct
+	on wsct.salesid = st.salesid 	
+
 Where st.salestype = 3		
 )
 
