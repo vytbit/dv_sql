@@ -1,5 +1,6 @@
 Select 
-	count(min_max.itemid) as "AnzahlItemIds"
+	min_max.itemid
+	--) as "AnzahlItemIds"
 FROM
 	"AX.PROD_DynamicsAX2012.dbo.REQITEMTABLE" as min_max
 	

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document>
+	<PurchLineEntity>
+		<LineNumber>Int64</LineNumber>
+		<PurchaseType>String</PurchaseType>
+		<CurrencyCode>String</CurrencyCode>
+		<PurchId>String</PurchId>
+		<ItemId>String</ItemId>
+		<VendAccount>String</VendAccount>
+		<TaxGroup>String</TaxGroup>
+		<TaxItemGroup>String</TaxItemGroup>
+		<PurchQty>Real</PurchQty>
+		<InventSiteId>String</InventSiteId>
+		<InventLocationId>String</InventLocationId>
+		<ConfirmedDlv>Date</ConfirmedDlv>
+		<OverDeliveryPct>Real</OverDeliveryPct>
+		<UnderDeliveryPct>Real</UnderDeliveryPct>
+		<PriceUnit>Real</PriceUnit>
+		<PurchUnit>String</PurchUnit>
+		<PurchPrice>Real</PurchPrice>
+		<LineAmount>Real</LineAmount>
+		<DefaultDimension>String</DefaultDimension>
+	</PurchLineEntity>
+</Document>

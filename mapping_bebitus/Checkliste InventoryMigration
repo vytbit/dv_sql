@@ -1,0 +1,17 @@
+Checkliste InventoryMigration
+
+Inventory List CTC -> Martin Gardemann
+Purchase Receipts (not invoiced yet) -> Martin Gardemann
+LogisticsId2EAN -> Carsten Jaensch
+ItemTaxGroupMapping -> Markus Zabel
+
+Prozessschritte
+1.) Truncate alle Tabellen (BEB Prefix)
+2.) Import aller Ausgangsdaten (Receipts, 2 Mappings)
+3.) Generate XML (Inventory, PO Header, PO Lines, INT-10)
+4.) Import Inventory
+5.) Book Inventory Journal
+6.) Import PO Header und Lines
+7.) Run Job to approve POs
+8.) Put INT-10 into INT-10 folder
+9.) Check Inventory value, final go by Finance

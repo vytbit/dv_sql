@@ -1,0 +1,1 @@
+LineNumber;PurchaseType;CurrencyCode;PurchId;ItemId;VendAccount;TaxGroup;TaxItemGroup;PurchQty;InventSiteId;InventLocationId;ConfirmedDlv;OverDeliveryPct;UnderDeliveryPct;PriceUnit;PurchUnit;PurchPrice;LineAmount;DefaultDimension

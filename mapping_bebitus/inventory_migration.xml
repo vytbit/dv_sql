@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document>
+	<InventJournalEntity>
+		<ItemId>String</ItemId>
+		<JournalId>String</JournalId>
+		<LineNum>Real</LineNum>
+		<JournalNameId>String</JournalNameId>
+		<TransDate>Date</TransDate>
+		<Qty>Real</Qty>
+		<CostPrice>Real</CostPrice>
+		<InventLocationId>String</InventLocationId>
+		<InventSiteId>String</InventSiteId>
+		<DefaultDimensionStr>String</DefaultDimensionStr>
+		<OffsetLedgerAccount>String</OffsetLedgerAccount>
+	</InventJournalEntity>
+</Document>
