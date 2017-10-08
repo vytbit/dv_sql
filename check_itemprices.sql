@@ -68,5 +68,5 @@ left join
 left join
 	pim on pim.ean = it.itemid			
 Where 
-	 imgi.modelgroupid <> 'SERVICE'
-	 and i.itemid = '04008976220145'	
+	 imgi.modelgroupid <> 'SERVICE' and  i.price = 0 and s."StockValue" <> 0
+	 --and i.itemid = '04008976220145'	

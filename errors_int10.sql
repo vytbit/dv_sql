@@ -1,9 +1,16 @@
 Select 
-	count(purchid),status, cast(createddatetime as Date) "Anlagedatum",
+	count(purchid) as "Anzahl",
+	case status
+		when 0 then 'created'
+		when 1 then 'finished'
+		when 2 then 'error'
+		else 'na'
+	end	as "Status_INT10"
+	, cast(createddatetime as Date) "Anlagedatum    ",
 	case left(purchid,2)
 		when 'TF' then 'UML'
 		else 'BEST'
-	end "Type"
+	end "Type of Entry"
 
 FROM 
 	"AX.PROD_DynamicsAX2012.dbo.WINPURCHORDERRECEIPTTABLESTAGING"
