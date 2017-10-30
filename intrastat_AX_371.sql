@@ -49,7 +49,7 @@ Select
 From 
 	"AX.PROD_DynamicsAX2012.dbo.CUSTINVOICEJOUR"  
 WHERE
-	invoiceaccount in ('D02401046','D02725448','D02683871')
+	invoiceaccount in ('D02401046','D02725448','D02683871','D02912839')
 )
 
 Select 
