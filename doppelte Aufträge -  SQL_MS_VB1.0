@@ -1,0 +1,30 @@
+with countlines as
+(
+Select SALESLINE.SALESID, count(SALESLINE.LINENUM) as expr2
+FROM SALESLINE
+Group by SALESLINE.SALESID
+),
+salesamount as
+(
+Select SALESLINE.SALESID, sum(SALESLINE.LINEAMOUNT) as expr2
+FROM SALESLINE
+Group by SALESLINE.SALESID
+)
+Select st.winsplitordercounter, st.salesname,
+st.customerref,cast(st.createddatetime as Date) as "CreatedDate", countlines.expr2 "AnzahlZeilen",salesamount.expr2 "Auftragswert",st.email,count(st.salesid) "AnzahlOrders", max(st.salesid), min(st.salesid)
+FROM 
+	SALESTABLE st
+LEFT JOIN 
+	countlines 
+	on countlines.salesid = st.salesid
+LEFT JOIN 
+	salesamount 
+	on salesamount.salesid = st.salesid
+Where 
+	st.salestype = 3 and st.salesid > 'A0005800000' --and st.documentstatus in ('0', '3')
+	and customerref not in ('1006002315','1006402879')
+	and left(st.salesid,3) <> 'COR'
+Group by 
+	st.winsplitordercounter,  st.salesname, st.customerref, countlines.expr2,salesamount.expr2,st.email, cast(st.createddatetime as Date)
+having 
+	count(st.salesid) > 1
